@@ -1,19 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-:root {
-    --cor-primaria: #000000; 
-    --cor-secundaria: #FF00FF;
-    --cor-terciaria: #92C7CF; 
-    --cor-hover: #E5E1DA; 
-}
+@import url(cards.css);
 
 
-
-*{
-    margin: 0; 
-    padding: 0;
-  
+html{
+    scroll-behavior: smooth !important;
 }
 
 body{
@@ -25,9 +16,13 @@ body{
     background-image: url(assets/space-bg.png);
     background-repeat: no-repeat;
     font-weight: 700;
+    background-size: cover;             
     font-family: "Roboto", serif;
-    background-size: cover; 
     background-attachment: fixed; 
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    
 }
 
 
@@ -67,20 +62,18 @@ body{
 
 
 .apresentacao {
-    /* height: 50%; */
     margin: 3% 15%; 
     display: flex;
     align-items: center; 
     justify-content: space-between; 
     gap: 82px; 
-    min-height: 100vh; /* Garante que cubra toda a área visível */
+    min-height: 100vh; 
     background-image: url(assets/background-nave.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
     border: 3px solid rgba(255, 255, 255, 0.2);
-    /* background: transparent; margin 5 15 */
     
 }
 
@@ -107,7 +100,8 @@ body{
 }
 .apresentacao_conteudo_p{
     
-    font-size: 2.3rem; 
+    font-size: 2rem; 
+    font-weight: 500;
     text-align: center;
     color: #FFFFFF; 
 
@@ -128,6 +122,13 @@ body{
      2px  2px 0 black; 
 
 }
+h3{    
+    font-family: "Orbitron", serif;
+    font-size: 1px !important;
+    line-height: 1; 
+    text-align: center;
+    font-weight: 1000;
+}
 @keyframes pulse {
         0%, 100% {
       text-shadow: 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF;
@@ -136,7 +137,9 @@ body{
       text-shadow: 0 0 30px #FF4500, 0 0 50px #FF4500, 0 0 60px #FF4500;
     }
 }
-
+#mobile_card{
+    display: none;
+}
 
 
 .botoes{
@@ -199,11 +202,10 @@ body{
 }
 
 .rodape{
-    padding: 24px; 
+    padding: 1px; 
     color:rgb(136, 136, 153);
     text-align: center; 
     font-family: "Montserrat", serif; 
-    width: 400; 
     font-size: 1rem; 
 }
 .rodape:hover{
@@ -283,10 +285,16 @@ button {
     body{
         background-image: url(assets/space.mobile.png);
         background-position: center;
-        background-repeat: no-repeat; /* Evita repetição da imagem */
+        background-repeat: no-repeat;
         height: 95vh;
       
 
+    }
+    h4{
+        display: none;
+    }
+    .cards-container{
+        display: none;
     }
     .cabecalho_mobile{
         display: block;
@@ -297,7 +305,9 @@ button {
     .cabecalho{
         display: none;
     }
-    
+    #mobile_card{
+        display: block;
+    }
     .cabecalho_menu{
         justify-content: center;
     }
@@ -315,18 +325,17 @@ button {
     }     
 .apresentacao__mobile{
     background-image: url(assets/rocket-mobile.png);
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-repeat: no-repeat; 
     height: 90vh;
       
-  width: 84%; /* Mantém afastamento nas laterais */
+  width: 84%;
   max-width: 1200px; 
-  margin: auto auto; /* Adiciona espaçamento acima e centraliza */
-  padding: 30px; /* Espaço interno dentro do main */
+  margin: auto auto; 
+  padding: 30px; 
   border-radius: 20px; 
-  overflow: hidden; /* Evita que elementos saiam */
-  /* word-wrap: break-word;  */
+  overflow: hidden;
   border: 3px;
   animation: brilhoNeon 1.5s infinite alternate;
 }
@@ -359,7 +368,7 @@ button {
 
 
 .botoes_links{
-    border-radius: 10px;
+    border-radius: 8px;
     background: linear-gradient(90deg, #025858f5, #1c1c3aa8);
     color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
@@ -386,6 +395,28 @@ button {
     
 }
 
+.starfall-background {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent; 
+    z-index: -1; 
+    pointer-events: none; 
+}
 
-
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    animation: fall linear infinite;
+    opacity: 0.8; 
+}
+@keyframes fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+}
 
