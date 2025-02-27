@@ -286,7 +286,7 @@ button {
         background-image: url(assets/space.mobile.png);
         background-position: center;
         background-repeat: no-repeat;
-        height: 95vh;
+        background-attachment: scroll; 
       
 
     }
