@@ -310,9 +310,10 @@ button {
     }
     .cabecalho_menu{
         justify-content: center;
+        gap: 17px; 
     }
 
-    .bi {
+    .fa-solid {
         font-size: 34px;
         color: rgb(100, 150, 255);
       }

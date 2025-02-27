@@ -15,3 +15,8 @@ const starContainer = document.createElement('div');
         }
 
         setInterval(createStar, 200);
+
+
+
+
+        
