@@ -1,27 +1,28 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Adicione esta linha
 const { Pool } = require('pg');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Configuração do banco de dados Neon
+// Configurar CORS para aceitar requests do Vercel
+app.use(cors({
+  origin: 'https://portfolio-dev-six-pied.vercel.app'
+}));
+
+// Configurar conexão com o Neon
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false,
-  },
+    rejectUnauthorized: false
+  }
 });
 
 // Middleware
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname)); // Serve arquivos estáticos (index.html)
-
-// Rota para o formulário
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
-});
 
 // Rota para processar o formulário
 app.post('/submit-form', async (req, res) => {
@@ -34,14 +35,13 @@ app.post('/submit-form', async (req, res) => {
       [name, email, message]
     );
     client.release();
-    res.redirect('/?success=true'); // Redireciona com mensagem de sucesso
+    res.json({ success: true, message: 'Mensagem enviada!' }); // Resposta JSON
   } catch (err) {
     console.error(err);
-    res.status(500).send('Erro ao salvar mensagem');
+    res.status(500).json({ success: false, message: 'Erro ao enviar mensagem' });
   }
 });
 
-// Inicia o servidor
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
