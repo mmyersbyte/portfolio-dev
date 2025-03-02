@@ -201,15 +201,21 @@ h3{
  
 }
 
-.rodape{
+.rodape {
     padding: 1px; 
-    color:rgb(136, 136, 153);
+    color: rgb(136, 136, 153);
     text-align: center; 
     font-family: "Montserrat", serif; 
     font-size: 1rem; 
 }
-.rodape:hover{
-    color: beige;
+
+.rodape a {
+    color: rgb(136, 136, 153); /* Mantém a cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+.rodape a:hover {
+    text-decoration: underline;
 }
 
 
@@ -283,7 +289,7 @@ button {
 @media (max-width: 1200px){
 
     body{
-        background-image: url(assets/space.mobile.png);
+        background-image: url(assets/space.moba.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: scroll; 
@@ -315,7 +321,8 @@ button {
 
     .fa-solid {
         font-size: 34px;
-        color: rgb(100, 150, 255);
+        color: #17153B;
+        -webkit-text-stroke: 0.5px white; 
       }
     .moba{
         width: 70px;
@@ -323,7 +330,13 @@ button {
 
     .apresentacao {
         display: none;
-    }     
+    }    
+    
+    .fa-rocket{
+        color: white;
+        font-size: 1em;
+        padding-left: 1.5px;
+    }
 .apresentacao__mobile{
     background-image: url(assets/rocket-mobile.png);
     background-size: cover; 
@@ -347,7 +360,7 @@ button {
         box-shadow: 0 0 10px #020f55;
     }
     100%{
-        box-shadow: 0 0 10px #0078be, 0 0 20px #020f55;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.37), 0 0 20px #020f55;
     }
 
 }
@@ -358,9 +371,9 @@ button {
 }
     
 .apresentacao_conteudo_p{
-    font-size: 1.5rem ;
+    font-size: 1.3rem ;
     font-family: "Orbitron", serif;
-    font-weight: 600;
+    font-weight: bold;
   
   
  
@@ -393,7 +406,73 @@ button {
     width: 168%;
     
 }
+
+.espacial-title {
+    font-size: 1rem !important;
+    font-family: "Audiowide", serif;
+    font-weight: bold;
+    text-transform: uppercase;
     
+    text-align: center !important;
+    color: rgba(255, 255, 255, 0.555) !important;
+    text-shadow: 
+        0 0 5px white, 
+        0 0 10px white, 
+        0 0 28px navy, 
+        0 0 40px white !important;
+    letter-spacing: 4px; 
+    animation: glow 2s infinite alternate; 
+}
+#form.form {
+    display: flex;
+    padding-top: 2px !important;
+    padding-bottom: 20px !important;
+    height: 10%;
+    justify-content: center;
+    padding: 30px 5%;
+    box-sizing: border-box; /* Garante que o padding não some à largura */
+}
+
+.espacial-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.521);
+    width: 100%; /* Ocupa 100% do container pai (que tem padding) */
+    max-width: 400px; /* Limite máximo para mobile */
+    text-align: center;
+    animation: float 3s infinite ease-in-out alternate;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+
+.espacial-input, .espacial-textarea {
+    width: 100% !important;
+    padding: 20px !important;
+    background: transparent;
+    border: 1px solid #0d1329;
+    color: #fff;
+    font-size: 1rem; 
+}
+
+.espacial-button {
+    width: 80% !important;
+    padding: 8px;
+    background: linear-gradient(90deg, #0258582f, #1c1c3a15);   
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 60px;
+    box-shadow: 0 0 10px white;
+}
+.espacial-button:hover {
+    background: #1C1C3A;
+    box-shadow: 0 0 20px #00ffff54;
+    transform: scale(1.05);
+}
 }
 
 .starfall-background {
@@ -421,3 +500,84 @@ button {
     100% { transform: translateY(100vh); }
 }
 
+.form{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.espacial-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; 
+    
+}
+.espacial-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    max-width: 1320px; /* Aumenta a largura máxima do formulário */
+    padding: 50px; /* Mais espaço interno */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.521);
+    width: 100%;
+    text-align: center;
+    animation: float 3s infinite ease-in-out alternate;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(10px); }
+}
+.espacial-title {
+    font-size: 2em !important; /* Título maior */
+    letter-spacing: 6px; /* Mais espaçamento entre letras */
+    font-family: "Audiowide", serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    text-align: center !important;
+    color: rgba(255, 255, 255, 0.555) !important;
+    text-shadow: 
+        0 0 5px white, 
+        0 0 10px white, 
+        0 0 28px navy, 
+        0 0 40px white !important;
+    letter-spacing: 4px; 
+    animation: glow 2s infinite alternate; 
+}
+.espacial-input, .espacial-textarea {
+    width: 100%; 
+    padding: 20px; 
+    font-size: 1.1em;
+    margin: 10px 0;
+    background: transparent;
+    border: 1px solid #0d1329;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.815);
+}
+.espacial-button {
+    width: 40%;
+    padding: 8px;
+    background: linear-gradient(90deg, #0258582f, #1c1c3a15);   
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 60px;
+    box-shadow: 0 0 10px white;
+
+}
+.espacial-button:hover {
+    background: #1C1C3A;
+    box-shadow: 0 0 20px #00ffff54;
+    transform: scale(1.05);
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    }
