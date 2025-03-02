@@ -10,9 +10,13 @@ const port = process.env.PORT || 3000;
 
 // Configuração do CORS para permitir o Vercel e o próprio servidor
 app.use(cors({
-  origin: ['https://portfolio-dev-six-pied.vercel.app', 'https://portfolio-dev-1uzm.onrender.com'],
-  methods: ['GET', 'POST']
-}));
+    origin: [
+      'https://portfolio-dev-six-pied.vercel.app',
+      'https://portfolio-dev-1uzm.onrender.com',
+      'http://localhost:3000' 
+    ],
+    methods: ['GET', 'POST']
+  }));
 
 // Configurar conexão com o Neon
 const pool = new Pool({
