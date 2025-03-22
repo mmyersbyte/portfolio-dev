@@ -1,188 +1,154 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 .cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    align-items: stretch;
-    padding: 15px 15%;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: stretch;
+  padding: 15px 15%;
+  flex-wrap: wrap;
 }
 
 .card {
-    min-height: 600px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    padding: 20px; 
-    border-radius: 25px; 
-    width: 300px;   
-    background-image: url(assets/cardBG.jpg);
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed;
-    background-size: cover;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
-    display: flex;
-    background-size: cover;
-    flex-direction: column;
-    align-items: center;
-   
+  min-height: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 25px;
+  width: 300px;
+  background-color: transparent !important;
+
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  display: flex;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.5); 
-    margin-top: 5px; 
-    margin-bottom: 20px; 
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 .card h3 {
-    font-size: 2em !important;
-    text-align: center;
-    margin: 50px 0;
-    color: #ffffff;
-    
+  font-size: 2em !important;
+  text-align: center;
+  margin: 50px 0;
+  color: #ffffff;
 }
 .card p {
-    font-size: 0.1rem !;
-    color: #ddd;
-    margin-top: 10px;
+  font-size: 0.1rem !;
+  color: #ddd;
+  margin-top: 10px;
 }
 
+h4 {
+  font-size: 4em !important;
+  font-family: 'Audiowide', serif;
+  font-weight: bold;
+  text-transform: uppercase;
 
-
-h4{
-    font-size: 4em !important;
-    font-family: "Audiowide", serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    
-    text-align: center !important;
-    color: rgba(255, 255, 255, 0.555) !important;
-    text-shadow: 
-        0 0 5px white, 
-        0 0 10px white, 
-        0 0 20px navy, 
-        0 0 40px white !important;
-    letter-spacing: 4px; 
-    animation: glow 2s infinite alternate; 
-
+  text-align: center !important;
+  color: rgba(255, 255, 255, 0.555) !important;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px navy, 0 0 40px white !important;
+  letter-spacing: 4px;
+  animation: glow 2s infinite alternate;
 }
 @keyframes glow {
-    from {
-        text-shadow: 
-            0 0 5px navy, 
-            0 0 10px #00bfff, 
-            0 0 20px navy, 
-            0 0 40px #00bfff !important; 
-    }
-    to {
-        text-shadow: 
-            0 0 10px yellow, 
-            0 0 20px yellow, 
-            0 0 40px yellow, 
-            0 0 80px #00bfff !important;
-    }
+  from {
+    text-shadow: 0 0 5px navy, 0 0 10px #00bfff, 0 0 20px navy, 0 0 40px #00bfff !important;
+  }
+  to {
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow,
+      0 0 80px #00bfff !important;
+  }
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 .icons i {
-    font-size: 24px !important;
-    color: white;
-    transition: color 0.3s ease;
+  font-size: 24px !important;
+  color: white;
+  transition: color 0.3s ease;
 }
 
-
-
-.fa-node-js:hover { color: #68a063; }
-.fa-html5:hover { color: #e34c26; }
-.fa-css3-alt:hover { color: #264de4; }
-.fa-js-square:hover { color: #f0db4f; }
-.fa-database:hover { color: #00758f; }
-
+.fa-node-js:hover {
+  color: #68a063;
+}
+.fa-html5:hover {
+  color: #e34c26;
+}
+.fa-css3-alt:hover {
+  color: #264de4;
+}
+.fa-js-square:hover {
+  color: #f0db4f;
+}
+.fa-database:hover {
+  color: #00758f;
+}
 
 .cardmobile {
-    margin-bottom: 40px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    position: relative; 
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: relative;
 }
 .cardmobile img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .cardmobile-title {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .cardmobile-icons {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    display: flex;
-    gap: 8px; 
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
 }
 .iconmobile {
-    font-size: 14px;
-    color: #fff; 
-    background-color: rgba(0, 0, 0, 0.7); 
-    padding: 5px;
-    border-radius: 50%; 
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  border-radius: 50%;
 }
 .titulomobile {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-family: "Audiowide", serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center !important;
-    color: rgba(255, 255, 255, 0.555) !important;
-    text-shadow: 
-        0 0 5px white, 
-        0 0 10px white, 
-        0 0 20px navy, 
-        0 0 40px white !important; 
-    letter-spacing: 4px; 
-    animation: glow 2s infinite alternate; 
-
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Audiowide', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center !important;
+  color: rgba(255, 255, 255, 0.555) !important;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px navy, 0 0 40px white !important;
+  letter-spacing: 4px;
+  animation: glow 2s infinite alternate;
 }
 @keyframes glow {
-    from {
-        text-shadow: 
-            0 0 5px navy, 
-            0 0 10px #00bfff, 
-            0 0 20px navy, 
-            0 0 40px #00bfff !important; 
-    }
-    to {
-        text-shadow: 
-            0 0 10px yellow, 
-            0 0 20px yellow, 
-            0 0 40px yellow, 
-            0 0 80px #00bfff !important;
-    }
+  from {
+    text-shadow: 0 0 5px navy, 0 0 10px #00bfff, 0 0 20px navy, 0 0 40px #00bfff !important;
+  }
+  to {
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow,
+      0 0 80px #00bfff !important;
+  }
 }
-
-
-
-
-
-
